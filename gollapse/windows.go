@@ -1,0 +1,35 @@
+package gollapse
+
+var (
+	WindowsGollapsers = Gollapsers{
+		NewGollapser(`.:.ProgramData.`, `%ALLUSERSPROFILE%\`),
+		NewGollapser(`.:.Documents and Settings.All Users.`, `%ALLUSERSPROFILE%`),
+		NewGollapser(`.:.Program Files.Common Files.`, `%COMMONPROGRAMFILES%\`),
+		NewGollapser(`.:.Program Files \(x86\).Common Files.`, `%COMMONPROGRAMFILES(x86)%\`),
+		NewGollapser(`.:.Users\\(.*?)\\AppData.Local.Temp.`, `%TEMP%\`),
+		NewGollapser(`.:.ProgramData.`, `%PROGRAMDATA%\`),
+		NewGollapser(`.:.Program Files.`, `%PROGRAMFILES%\`),
+		NewGollapser(`.:.Program Files \(x86\)`, `%PROGRAMFILES(X86)%\`),
+		NewGollapser(`.:.Users.Public.`, `%PUBLIC%\`),
+		NewGollapser(`.:.Documents and Settings\\(.*?)\\LocalSettings.Temp.`, `%TEMP%\`),
+		NewGollapser(`.:.Users\\(.*?)\\AppData.Local.Temp.`, `%TEMP%\`),
+		NewGollapser(`.:.Users\\(.*?)\\AppData.Local.`, `%LOCALAPPDATA%\`),
+		NewGollapser(`.:.Users\\(.*?)\\AppData.Roaming.`, `%APPDATA%\`),
+		NewGollapser(`.:.Users\\(.*?)\\Application Data.`, `%APPDATA%\`),
+		NewGollapser(`.:.Windows\\(.*?)\\Application Data.`, `%APPDATA%\`),
+		NewGollapser(`.:.Users\\(.*?)\\`, `%USERPROFILE%\`),
+		NewGollapser(`.:.\$Recycle\.Bin\\(.*?)\\`, `%USERRECYCLEBIN%\`),
+		NewGollapser(`.:.DOCUME~1.\\(.*?)\\`, `%USERPROFILE%\`),
+		NewGollapser(`.:.Documents and Settings\\(.*?)\\`, `%USERPROFILE%\`),
+		NewGollapser(`.:.Windows.`, `%WINDIR%\`),
+		NewGollapser(`%USERPROFILE%.Application Data.Microsoft.UProof`, ``),
+		NewGollapser(`%USERPROFILE%.Local Settings.History`, ``),
+		NewGollapser(`%APPDATA%.Microsoft.UProof `, ``),
+		NewGollapser(`%LOCALAPPDATA%.Microsoft.Windows.Temporary InternetFiles`, ``),
+		//NewGollapser(`.REGISTRY.USER.S(-[0-9]{1}){2}-[0-9]{2}(-[0-9]{9}){1}(-[0-9]{10}){1}-[0-9]{9}-[0-9]{4}`, `HKCU`),
+		//NewGollapser(`.REGISTRY.USER.S(-[0-9]{1}){2}-[0-9]{2}(-[0-9]{10}){2}-[0-9]{9}-[0-9]{4}`, `HKCU`),
+		//NewGollapser(`.REGISTRY.USER.S(-[0-9]{1}){2}-[0-9]{2}(-[0-9]{10}){3}-[0-9]{4}`, `HKCU`),
+		//NewGollapser(`.REGISTRY.MACHINE.`, `HKLM\`),
+		//NewGollapser(`.Registry.Machine.`, `HKLM\`),
+	}
+)
